@@ -14,51 +14,53 @@ function App() {
 
   const onChangeHandle = (e) => {
     const val = Number(e.target.value)
+    let current = ad
     switch (e.target.id) {
       case "AD":
-        setAd(() => val)
+        current = val
         break
       case "meiji":
-        setAd(() => val + 1867)
+        current = val + 1867
         break
       case "taisho":
-        setAd(() => val + 1911)
+        current = val + 1911
         break
       case "showa":
-        setAd(() => val + 1925)
+        current = val + 1925
         break
       case "heisei":
-        setAd(() => val + 1988)
+        current = val + 1988
         break
       case "reiwa":
-        setAd(() => val + 2018)
+        current = val + 2018
         break
     }
-    if (1867 < ad && ad <= 1911){
+    setAd(current)
+    if (1867 < current && current <= 1911){
       setIsMeiji(true)
       setIsTaisho(false)
       setIsShowa(false)
       setIsHeisei(false)
       setIsReiwa(false)
-    }else if (1911 < ad && ad <= 1925 ){
+    }else if (1911 < current && current <= 1925 ){
       setIsMeiji(false)
       setIsTaisho(true)
       setIsShowa(false)
       setIsHeisei(false)
       setIsReiwa(false)
-    }else if (1925 < ad && ad <= 1988 ){
+    }else if (1925 < current && current <= 1988 ){
       setIsMeiji(false)
       setIsTaisho(false)
       setIsShowa(true)
       setIsHeisei(false)
       setIsReiwa(false)
-    }else if (1988 < ad && ad <= 2018 ){
+    }else if (1988 < current && current <= 2018 ){
       setIsMeiji(false)
       setIsTaisho(false)
       setIsShowa(false)
       setIsHeisei(true)
       setIsReiwa(false)
-    }else if (2018 < ad ){
+    }else if (2018 < current ){
       setIsMeiji(false)
       setIsTaisho(false)
       setIsShowa(false)
