@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/yearstrans/static/js/main.64e7a1c8.js",
+    "main.js": "/yearstrans/static/js/main.ef50a0ca.js",
     "index.html": "/yearstrans/index.html",
-    "main.64e7a1c8.js.map": "/yearstrans/static/js/main.64e7a1c8.js.map"
+    "main.ef50a0ca.js.map": "/yearstrans/static/js/main.ef50a0ca.js.map"
   },
   "entrypoints": [
-    "static/js/main.64e7a1c8.js"
+    "static/js/main.ef50a0ca.js"
   ]
 }

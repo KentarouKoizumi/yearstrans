@@ -34,31 +34,31 @@ function App() {
         setAd(() => val + 2018)
         break
     }
-    if (1867 < val && val <= 1911){
+    if (1867 < ad && ad <= 1911){
       setIsMeiji(true)
       setIsTaisho(false)
       setIsShowa(false)
       setIsHeisei(false)
       setIsReiwa(false)
-    }else if (1911 < val && val <= 1925 ){
+    }else if (1911 < ad && ad <= 1925 ){
       setIsMeiji(false)
       setIsTaisho(true)
       setIsShowa(false)
       setIsHeisei(false)
       setIsReiwa(false)
-    }else if (1925 < val && val <= 1988 ){
+    }else if (1925 < ad && ad <= 1988 ){
       setIsMeiji(false)
       setIsTaisho(false)
       setIsShowa(true)
       setIsHeisei(false)
       setIsReiwa(false)
-    }else if (1988 < val && val <= 2018 ){
+    }else if (1988 < ad && ad <= 2018 ){
       setIsMeiji(false)
       setIsTaisho(false)
       setIsShowa(false)
       setIsHeisei(true)
       setIsReiwa(false)
-    }else if (2018 < val ){
+    }else if (2018 < ad ){
       setIsMeiji(false)
       setIsTaisho(false)
       setIsShowa(false)
