@@ -2,7 +2,7 @@ import { TextField, Typography, Stack, Box } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2';
 import { Container } from '@mui/system'
 import React, { useRef, useState } from 'react';
-// import { TextField } from 'react-number-format'
+import { NumericFormat } from 'react-number-format'
 
 function App() {
   const [ad, setAd] = useState(new Date().getFullYear())
@@ -64,6 +64,12 @@ function App() {
       setIsShowa(false)
       setIsHeisei(false)
       setIsReiwa(true)
+    }else{
+      setIsMeiji(false)
+      setIsTaisho(false)
+      setIsShowa(false)
+      setIsHeisei(false)
+      setIsReiwa(false)
     }
   }
 
@@ -78,60 +84,60 @@ function App() {
       <Grid container spacing={10} sx={{margin: 1}}>
         <Grid xs>
           <Stack direction="column" spacing={2}>
-            <TextField
+            <NumericFormat
                 id="AD"
                 label="西暦"
                 value={ad}
-                type="number"
                 onChange={onChangeHandle}
+                customInput={TextField}
               />
           </Stack>
         </Grid>
         <Grid xs>
           <Stack direction="column" spacing={2}>
-            <TextField
+            <NumericFormat
               id="meiji"
               label="明治"
               value={ad - 1867}
-              type="number"
               focused={isMeiji}
               color={isMeiji ? "secondary" : ""}
+              customInput={TextField}
               onChange={onChangeHandle}
             />
-            <TextField
+            <NumericFormat
               id="taisho"
               label="大正"
               value={ad - 1911}
-              type="number"
               focused={isTaisho}
               color={isTaisho ? "secondary" : ""}
+              customInput={TextField}
               onChange={onChangeHandle}
             />
-            <TextField
+            <NumericFormat
               id="showa"
               label="昭和"
               value={ad - 1925}
-              type="number"
               focused={isShowa}
               color={isShowa ? "secondary" : ""}
+              customInput={TextField}
               onChange={onChangeHandle}
             />
-            <TextField
+            <NumericFormat
               id="heisei"
               label="平成"
               value={ad - 1988}
-              type="number"
               focused={isHeisei}
               color={isHeisei ? "secondary" : ""}
+              customInput={TextField}
               onChange={onChangeHandle}
             />
-            <TextField
+            <NumericFormat
               id="reiwa"
               label="令和"
               value={ad - 2018}
-              type="number"
               focused={isReiwa}
               color={isReiwa ? "secondary" : ""}
+              customInput={TextField}
               onChange={onChangeHandle}
             />
           </Stack>
