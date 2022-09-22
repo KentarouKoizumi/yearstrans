@@ -28,7 +28,6 @@ function App() {
         setAd(() => val + 2018)
         break
     }
-    console.log(ad)
   }
 
   return (
